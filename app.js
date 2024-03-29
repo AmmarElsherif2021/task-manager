@@ -6,7 +6,8 @@ require('dotenv').config()
 const app = express();
 //const routes = require('./');
 app.use(express.json())
-app.use('/api/v1/tasks', tasks)
+app.use('/api/v1/tasks', tasks);
+app.use(express.static('./public'))
 
 //render only if db is connected
 const start = async () => {
